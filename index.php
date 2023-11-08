@@ -1,6 +1,6 @@
 <?php
 include('connection.php');
-// session for security purpose?
+// session for security purpose.............
 session_start();
 ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blood Management</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -27,25 +27,27 @@ session_start();
         ************************************** -->
         <section class="body">
         <form action="" method="POST">
-        <table>
-            <tr>
-                <td class="login-title"><b>Enter Username :</b></td>
+        <center><table>
+           <tr>
+                <td class="login-title"><b>Username</b></td>
                 <td class="login-input"><input type="text" name="un" placeholder="Enter Username"></td>
             </tr>
             <tr>
-                <td class="login-title"><b>Enter password :</b></td>
+                <td class="login-title"><b>Password</b></td>
                 <td class="login-input"><input type="password" name="ps" placeholder="Enter password"></td>
             </tr>
             <tr>
-                <td class="button-container"><input class="button" type="submit" name="sub" value="login" style="width: 130px; height: 60px; border-radius:5px;"></td>
-            </tr>
-        </table>
+                <td class="button-container"><input class="button" type="submit" name="sub" value="Login" style="width: 130px; height: 60px; border-radius:5px;"></td>
+            </tr> 
+        </table></center>
         </form>
         <?php
         if(isset($_POST['sub']))
         {
              $un=$_POST['un'];
              $ps=$_POST['ps'];
+             
+            //  query for matching pass and usr name.........
              $q=$db->prepare("SELECT* FROM admin WHERE username='$un' AND pass='$ps'");
              $q->execute();
              $res=$q->fetchAll(PDO::FETCH_OBJ);
@@ -68,7 +70,10 @@ session_start();
         footer
         ********************************************* -->
         <section class="footer">
+            
+            <div>
             <span>Copyright@</span><strong> team_undefined</strong>
+            </div>
         </section>
         </div>
     </div>
