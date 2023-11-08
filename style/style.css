@@ -1,0 +1,96 @@
+.container{
+    width: 100%;
+    height: auto;
+}
+.inner-container{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 144, 14, 0.10);;
+
+}
+.header{
+
+    margin-top: 80px;
+    width: 100%;
+    height: 50px;
+    background-color: #FF900E;
+    
+}
+.body{
+    width: 100%;
+    height: 400px;
+}
+.footer{
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color:#FF900E;
+}
+
+/*  inner */
+.header h2{
+    text-align: center;
+    padding: 8px;
+    font-size: 35px;
+    color: #fff;
+    
+}
+.body table{
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table .login-title b{
+    margin-right:20px;
+    font-size: 24px;
+    color: #131313;
+}
+.body table tr td input{
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background-color: #f1e6da;
+}
+table .button{
+     margin-top: 30px;
+   padding: 5px;
+   font-size: 25px;
+   font-weight: 600;
+   letter-spacing: 2.1px;
+   color: #fff;
+   background-color: #FF900E !important;
+   border: none;
+}
+   .button:hover{
+    background-color: #cb7008 !important;
+   }
+.footer{
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+    font-size: 25px;
+}
+.footer span{
+    color: #131313;
+}
+/* logout button */
+.footer a{
+    text-decoration: none;
+    color: rgb(9, 7, 0);
+    position: relative;
+    top: -20px;
+    font-size: 22px;
+    border: solid 1px #131313;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: peru;
+}
+.footer a:hover{
+    background-color: rgb(187, 7, 7);
+    color: #f1e6da;
+}
