@@ -26,7 +26,7 @@ session_start();
         body 
         ************************************** -->
         <section class="body">
-        <form action="" method="POST">
+        <form action="" method="post">
         <center><table>
            <tr>
                 <td class="login-title"><b>Username</b></td>
@@ -46,7 +46,7 @@ session_start();
         {
              $un=$_POST['un'];
              $ps=$_POST['ps'];
-             
+
             //  query for matching pass and usr name.........
              $q=$db->prepare("SELECT* FROM admin WHERE username='$un' AND pass='$ps'");
              $q->execute();

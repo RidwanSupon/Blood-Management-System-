@@ -18,30 +18,19 @@ session_start();
         <!-- ****************************************
         Heading
         ************************************************* -->
+        
         <section class="header">
-        <h2>Welcome Admin</h2>
+        <a href="admin-home.php"><h2>Blood Bank Management</h2></a>
         </section>
+       
         <br><br>
         <!-- *******************************************
         body 
         ************************************** -->
-        <section class="admin-control">
-        <?php
-        echo $un=$_SESSION['un'];
-        if(!$un){
-            header("Location:index.php");
-        }
-        ?>
-            <ul>
-                <li><a href="donor-reg.php">Donor Registration</a></li>
-                <li><a href="donor-list.php">Donor List</a></li>
-                <li><a href="exchange-blood.php">Exchange Blood Registration</a></li>
-                <li><a href="exchange-blood-list.php">Exchange Blood List</a></li>
-                <li><a href="stock-blood.php">Stock Blood</a></li>
-                <!-- <li><a href="out-stock-blood.php">Out Stock Blood</a></li> -->
-                <li><a href="ngo.php">NGO</a></li>
-            </ul>
-        </section>
+        <ul>
+            <li><a href="https://bdrcs.org/donate-blood/">Red Crescent</a></li>
+            <li><a href="https://daktarbhai.com/health-directory/blood-bank">Daktar bhai(list of blood bank)</a></li>
+        </ul>
         <br><br><br>
         
         <!--***************************** ***********

@@ -52,7 +52,7 @@ session_start();
             header("Location:index.php");
         }
         ?>
-        <center><h3>Donor Registration</h3></center>
+        <center><h3>Donor List</h3></center>
         <center><div class="form">
             <table>
             
