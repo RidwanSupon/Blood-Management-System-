@@ -23,7 +23,7 @@ session_start();
     position: relative;
     top: -30px;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(10,1fr); /* Added one column for delete option */
     /* width: 100%; */
     column-gap: 15px;
 }
@@ -59,16 +59,17 @@ session_start();
             <tr>
             <td><b>Name</td>
             <td><b>F_Name</b></td>
-            <!-- <td><b>City</b></td> -->
+             <td><b>City</b></td>
             <td><b>Address</b></td>
             <td><b>Age</b></td>
             <td><b>Email</b></td>
             <td><b>Contact</b></td>
             <td><b>B_Group</b></td>
             <td><b>Ex_bgroup</b></td>
+            <td><b>A</b></td> <!-- New column for delete option -->
             </tr>
             <?php
-            $q=$db->query("SELECT *FROM Ex_bgroup");
+            $q=$db->query("SELECT * FROM Ex_bgroup");
             while($r1=$q->fetch(PDO::FETCH_OBJ))
             {
                 
@@ -76,14 +77,14 @@ session_start();
                 <tr>
                 <td><?= $r1->name; ?></td>
                 <td><?= $r1->father_name; ?></td>
-                <!-- <td><?= $r1->city; ?></td> -->
+                 <td><?= $r1->city; ?></td>
                 <td><?= $r1->address; ?></td>
                 <td><?= $r1->age; ?></td>
                 <td><?= $r1->email; ?></td>
                 <td style="color:blue;"><?= $r1->phone_num; ?></td>
                 <td style="color:red;"><?= $r1->blood_group; ?></td>
                 <td style="color:red;"><?= $r1->ex_bgroup; ?></td>
-                
+                <td><a href="delete_entry.php?id=<?= $r1->id; ?>" onclick="return confirm('Are you sure you want to delete this record?')">Delete</a></td> <!-- Link for deleting entry -->
                 </tr>
                 <?php
             }
@@ -110,3 +111,4 @@ session_start();
     </div>
 </body>
 </html>
+

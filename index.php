@@ -55,7 +55,7 @@ session_start();
              //  login as admin
              if($res)
              {
-                $_SESSION['un']=$un;   // session add for security purpose session check
+                $_SESSION['un']=$un;  
                 header("Location:admin-home.php");
              }
              else{
